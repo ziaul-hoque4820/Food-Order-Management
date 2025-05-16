@@ -1,6 +1,6 @@
 import React from 'react'
-import logo1 from './assets/logo.svg'
-import userIcon from './assets/user-icon.svg'
+import logo1 from '../public/assets/logo.svg'
+import userIcon from '../public/assets/user-icon.svg'
 
 function Header() {
     return (

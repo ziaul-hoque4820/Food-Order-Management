@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+@theme {
+  --font-primary: "Inter", "sans-serif";
+
+  --color-primary: #FF602C;
+  --color-background: #1D1D1D;
+  --color-navbg: rgba(89, 86, 86, 0.29);
+  --color-cardbg: rgba(89, 86, 86, 0.4);
+}
