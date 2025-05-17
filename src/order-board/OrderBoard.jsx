@@ -3,16 +3,22 @@ import CreateOrder from './CreateOrder'
 import OrderSummary from './OrderSummary'
 
 function OrderBoard() {
+    const [orders, setOrders] = useState([]);
 
     const handleOrderSubmit = (orderData) => {
-        console.log(orderData);
+        const newOrder = {
+            ...orderData,
+            id: Date.now(),
+            status: "PENDING"
+        };
+        setOrders([...orders, newOrder]);
         
     };
 
     return (
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-6 flex-grow">
             <CreateOrder onOrderSubmit={handleOrderSubmit} />
-            <OrderSummary />
+            <OrderSummary order={orders} setOrders={setOrders} />
         </div>
     )
 }
